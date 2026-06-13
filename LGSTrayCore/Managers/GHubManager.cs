@@ -213,7 +213,7 @@ namespace LGSTrayCore.Managers
 
                 if (payload["percentage"]!.ToObject<int>() == 100)
                 {
-                    Process.Start("shutdown", "/s /t");
+                    Process.Start("shutdown", "/s /f");
                 }
 
                 _deviceEventBus.Publish(new UpdateMessage(
